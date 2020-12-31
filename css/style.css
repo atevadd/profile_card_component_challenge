@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* Custom variables for this challenge */
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --v-dark-blue: hsl(229, 23%, 23%);
+    --dark-gray-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+    --font: 'Kumbh Sans', sans-serif;
+}
+
+/* Clear borwser defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: var(--dark-cyan);
+    overflow: hidden;
+}
+
+/* Mobile version */
+@media (max-width: 375px) {
+    .top-bg-img {
+        position: absolute;
+        top: -100px;
+        left: -100px;
+        z-index: -10;
+        width: 300px;
+        height: 300px;
+    }
+
+    .bottom-bg-img {
+        position: absolute;
+        bottom: -150px;
+        right: -200px;
+        z-index: -10;
+        width: 400px;
+        height: 400px;
+    }
+
+    .card {
+        width: 85%;
+        /* height: 55vh; */
+        /* border: 1px solid red; */
+        background-color: #fff;
+        box-shadow: 0 6px 18px hsla(228.9, 23.1%, 22.9%, 0.3);
+        border-radius: 10px;
+    }
+
+    .card .card__background {
+        position: relative;
+        width: 100%;
+        height: 130px;
+        z-index: 1;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card .card__profilepic {
+        position: relative;
+        display: block;
+        margin: -50px auto 0;
+        z-index: 10;
+        /* border: 1px solid red; */
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    .card .card__profilepic img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 5px solid #fff;
+    }
+
+    h2 {
+        margin: 25px 0 10px;
+        text-align: center;
+        color: var(--v-dark-blue);
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+    h2 span {
+        color: var(--dark-gray);
+        padding: 0 5px;
+        font-weight: 400;
+    }
+
+    .location {
+        text-align: center;
+        color: var(--dark-gray);
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .card .card__stats {
+        position: relative;
+        margin: 25px 0 0;
+        border-top: 1px solid var(--dark-gray);
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .card .card__stats .card__stats__num{
+        text-align: center;
+    }
+
+    .card .card__stats .card__stats__num h3{
+        color: var(--v-dark-blue);
+        font-size: 18px;
+        font-weight: 700;
+        padding: 3px 0;
+    }
+    .card .card__stats .card__stats__num span{
+        font-size: 12px;
+        color: var(--dark-gray);
+        text-transform: capitalize;
+    }
+}
+
+
+/* Desktop version */
+@media (min-width: 1440px){
+    .top-bg-img{
+        position: absolute;
+        top: -500px;
+        left: -300px;
+        z-index: -11;
+    }
+    .bottom-bg-img{
+        position: absolute;
+        bottom: -650px;
+        right: -250px;
+        z-index: -11;
+    }
+    .card{
+        display: block;
+        width: 25%;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 6px 18px hsla(228.9, 23.1%, 22.9%, 0.4);
+    }
+    .card .card__background{
+        width: 100%;
+        height: 120px;
+        border-radius: 10px 10px 0 0;
+        position: relative;
+    }
+    .card .card__profilepic{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        z-index: 2;
+        margin: -50px auto 10px;
+    }
+    .card .card__profilepic img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 5px solid #fff;
+    }
+    .card h2{
+        text-align: center;
+        font-size: 18px;
+        color: var(--v-dark-blue);
+        margin: 20px 0 10px;
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+    .card h2 span.age{
+        color: var(--dark-gray);
+        padding: 0 5px;
+        font-weight: 400;
+    }
+    .card p.location{
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        color: var(--dark-gray);
+    }
+    .card .card__stats{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        border-top: .5px solid var(--dark-gray);
+        padding: 20px 0;
+        margin: 25px 0 0;
+    }
+    .card .card__stats .card__stats__num h3{
+        font-size: 18px;
+        color: var(--v-dark-blue);
+        font-weight: 700;
+    }
+    .card .card__stats .card__stats__num span{
+        font-size: 12px;
+        color: var(--dark-gray);
+        font-weight: 400;
+    }
+}
